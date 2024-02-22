@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a User Management System developed using Java, Spring Boot, Spring Data JPA, MySQL, Thymeleaf, HTML, and CSS. It provides a clean and modern web application for managing user accounts.
+This project is a Customer Management System developed using Java, Spring Boot, Spring Data JPA, MySQL, Thymeleaf, HTML, and CSS. It provides a clean and modern web application for managing user accounts.
 
 ## Features
 
