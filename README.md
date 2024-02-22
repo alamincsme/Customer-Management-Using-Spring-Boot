@@ -9,7 +9,7 @@ This project is a Customer Management System developed using Java, Spring Boot, 
 - Admin can create new Customer accounts.
 - Admin can delete Customer accounts.
 - Admin can edit Customer details (name, email, address).
-- Admin can view a list of all existing users.
+- Admin can view a list of all existing Customers.
 
 ## Technologies Used
 
