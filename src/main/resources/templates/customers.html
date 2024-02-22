@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <title>Customer Manager</title>
+</head>
+<body>
+<div align="center">
+    <h2>Customer Manager</h2>
+    <form method="get" th:action="@{/search}">
+        <input type="text" name="searchWord" th:value="${keyword}" /> &nbsp;
+        <input type="submit" value="Search" />
+    </form>
+    <div th:if="${pageTitle}">
+        [[${pageTitle}]]</div>
+    <h3><a th:href="@{/new}">New Customer</a></h3>
+    <table  cellpadding="5" border="1" >
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="customer : ${customer}">
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.customerName}"></td>
+            <td th:text="${customer.customerEmail}"></td>
+            <td th:text="${customer.customerAddress}"></td>
+            <td>
+                <a th:href="@{'/edit/'+${customer.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/delete/'+${customer.id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
